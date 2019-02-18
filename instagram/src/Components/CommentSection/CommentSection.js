@@ -1,6 +1,7 @@
 import React from 'react';
 
-export const CommentSection = (props) =>
-<div>
-Reactions Section
-</div>; 
+function CommentSection(props){
+    return(0);
+}
+
+export default CommentSection;
