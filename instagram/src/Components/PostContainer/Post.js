@@ -1,7 +1,7 @@
 import React from 'react';
-// import CommentSection from '../CommentSection/CommentSection';
+import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
-// import './Posts.css';
+import './Posts.css';
 
 const Post = (props) =>{
     return(
@@ -13,7 +13,7 @@ const Post = (props) =>{
         <div className='post-image-wrapper'>
           <img className='post-image' alt='post thumbnail' src={props.post.imageUrl} />
         </div>
-        {/* <CommentSection comments={props.post.comments} /> */}
+        <CommentSection comments={props.post.comments} />
       </div>
     );
   };

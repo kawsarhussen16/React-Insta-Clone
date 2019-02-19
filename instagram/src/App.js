@@ -11,7 +11,6 @@ class App extends Component {
       instaData : dummyData
     };
   }
- 
   render() {
     return (
       <div className="App">
