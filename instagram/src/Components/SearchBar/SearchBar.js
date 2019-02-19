@@ -23,10 +23,10 @@ class SearchBar extends React.Component {
                             id='search-bar' 
                             type="text"        
                             placeholder="Search" 
-                            value={this.state.term}       
+                            // value={this.state.input}       
                             onKeyDown={this.searchPosts}
                         />
-                    </form>
+                    </form> 
                 </div>
                 <div className="right-search">
                     <img id='explore' src= 'https://static.thenounproject.com/png/782776-200.png' alt="explore icon"/>
@@ -38,4 +38,6 @@ class SearchBar extends React.Component {
     )
     }
 }  
+
+
 export default SearchBar;
