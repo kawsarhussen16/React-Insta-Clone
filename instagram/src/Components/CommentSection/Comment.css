@@ -17,3 +17,10 @@
   text-align: center;
   padding: 1.5%;
 }
+
+/* Comment section */
+
+.comment-sec{
+  text-align: start;
+  margin-left: 1rem;
+}
