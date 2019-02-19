@@ -2,19 +2,37 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
 import './Post.css';
+import LikeSection from './LikeSection';
 
-const Post = (props) =>{
+class Post extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      likes: props.post.likes
+    };
+  }
+  incrementLike = () => {
+    let newlike = this.state.likes + 1;
+    this.setState({ newlike });
+  };
+  
+  render(){
     return(
         <div className="post-border">
         <PostHeader
-          username={props.post.username}
-          thumbnailUrl={props.post.thumbnailUrl}
+          username={this.props.post.username}
+          thumbnailUrl={this.props.post.thumbnailUrl}
         />
         <div className='post-image-wrapper'>
-          <img className='post-image' alt='post thumbnail' src={props.post.imageUrl} />
+          <img className='post-image' alt='post-thumbnail' src={this.props.post.imageUrl} />
         </div>
-        <CommentSection comments={props.post.comments} />
+        <LikeSection
+          incrementLike={this.incrementLike}
+          likes={this.state.likes}
+        />
+        <CommentSection comments={this.props.post.comments} />
       </div>
     );
-  };
+    }
+  }
 export default Post;
