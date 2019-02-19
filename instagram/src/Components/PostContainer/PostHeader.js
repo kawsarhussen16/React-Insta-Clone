@@ -1,5 +1,5 @@
 import React from 'react';
-// import './Posts.css';
+import './Comment.css';
 
 const PostHeader = props => {
   return (
@@ -11,7 +11,7 @@ const PostHeader = props => {
           src={props.thumbnailUrl}
         />
       </div>
-      <div>{props.username}</div>
+      <div className= 'user-name'>{props.username}</div>
     </div>
   );
 };
