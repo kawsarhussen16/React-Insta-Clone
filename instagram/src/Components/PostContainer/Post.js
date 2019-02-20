@@ -13,7 +13,7 @@ class Post extends React.Component {
     };
   }
   incrementLike = () => {
-    this.setState({ likes: this.likes +1 });
+    this.setState({ likes: this.state.likes +1 });
   };
   
   render(){
