@@ -14,9 +14,9 @@ const SearchBar = props =>{
                             <input
                                 name = 'input search'
                                 id='search-bar' 
-                                type="text"        
+                                type="search"        
                                 placeholder= " 🔍 Search"
-                                onChange={props.searchForPosts}
+                                onKeyDown={props.searchForPosts}
                             />
                     </div>
                     <div className="right-search">
