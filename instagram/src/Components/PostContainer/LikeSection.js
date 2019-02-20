@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
 
 const LikeSection = props => {
   return [
@@ -8,10 +10,11 @@ const LikeSection = props => {
       onClick={props.incrementLike}
     >
       <div className="like-section-wrapper">
-        <i className="far fa-heart" />
+        
+        <FontAwesomeIcon icon={faHeart} />
       </div>
       <div className="like-section-wrapper">
-        <i className="far fa-comment" />
+      <FontAwesomeIcon icon={faComment} />
       </div>
     </div>,
     <div className="like-section" key="likes-container">

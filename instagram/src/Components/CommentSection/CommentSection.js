@@ -4,7 +4,6 @@ import './Comment.css';
 import PropTypes from 'prop-types';
 import CommentInput from "./CommentInput";
 
-
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
