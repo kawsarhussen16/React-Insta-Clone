@@ -16,7 +16,7 @@ const SearchBar = props =>{
                                 id='search-bar' 
                                 type="text"        
                                 placeholder= " 🔍 Search"
-                                onChange={props.searchPosts}
+                                onChange={props.searchForPosts}
                             />
                     </div>
                     <div className="right-search">

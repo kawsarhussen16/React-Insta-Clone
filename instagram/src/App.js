@@ -23,9 +23,7 @@ class App extends Component {
         return item;
       }
     });
-    this.setState({ 
-      searchResult: user 
-    });
+    this.setState({ searchResult: user});
   };
 
   render() {
@@ -33,7 +31,7 @@ class App extends Component {
       <div className="App">
       <SearchBar 
           search = {this.state.search}
-          searchPosts ={this.searchPostHandler}
+          searchForPosts ={this.searchPostHandler}
        />
       <PostContainer posts = {
         this.state.searchResult.length > 0 ?
@@ -42,7 +40,8 @@ class App extends Component {
         addLike = {this.state.incrementLike}
         />
       </div>
-    )};
+    );
+  }
 }
 
 export default App;
