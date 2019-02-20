@@ -16,12 +16,12 @@ class PostsPage extends Component {
     componentDidMount() { this.setState({ instaData: dummyData })}
   ///////////////////////////////////////////////////////
   searchForPosts = e => {
-      const searchForPosts = this.state.instaData.filter(item => {
-        if (item.username.includes(e.target.value)) {
+      const user = this.state.instaData.filter(item => {
+        if ((item.username.includes(e.target.value)) || (item.comments.includes(e.target.value))) {
           return item;
         }
       });
-      this.setState({ searchResult: searchForPosts});
+      this.setState({ searchResult: user});
     };
     ///////////////////////////////////////////////////////
     render(){
