@@ -1,4 +1,5 @@
 import React from 'react';
+import './Login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -13,29 +14,34 @@ class Login extends React.Component {
   };
   handlePassword = e => {
       localStorage.setItem('user', this.state.username);
+      localStorage.setItem('password', this.state.password);
       window.location.reload();
     };
-
   render(){
     return(
       <div className ='login-box'>
-          <Form className ='login-form'>
-              <Input 
+          <form className ='login-form'>
+              <h1> Instagram</h1>
+              <input 
+                  className ='input-form'
                   type="text"
-                  placeholder=" username or email"
+                  placeholder="Phone number, username or email"
                   name="username"
                   value={this.state.username}
                   onChange={this.handleInput}
               />
-              <Input
+              <input
+                  className ='input-form'
                   type= 'password'
                   placeholder= 'Password'
                   name='password'
                   value={this.state.password}
                   onChange={this.handleInput} 
               />
-              <Button onClick={this.handlePassword}>Log in</Button>
-          </Form>
+              
+              <button onClick={this.handlePassword}>Log in</button>
+              <span className= 'textp'> <p> Don't have and account ? <strong>Sign up</strong></p></span>
+          </form>
       </div>
     );
   }

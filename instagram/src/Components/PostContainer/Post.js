@@ -4,7 +4,7 @@ import PostHeader from './PostHeader';
 import './Post.css';
 import LikeSection from './LikeSection';
 import PropTypes from "prop-types";
-
+import '../CommentSection/Comment.css';
 class Post extends React.Component {
   constructor(props) {
     super(props);
@@ -18,19 +18,24 @@ class Post extends React.Component {
   
   render(){
     return(
-        <div className="post-border">
-        <PostHeader
-          username={this.props.post.username}
-          thumbnailUrl={this.props.post.thumbnailUrl}
-        />
-        <div className='post-image-wrapper'>
-          <img className='post-image' alt='post-thumbnail' src={this.props.post.imageUrl} />
-        </div>
-        <LikeSection
-          likes={this.state.likes}
-          incrementLike={this.incrementLike}   
-        />
-        <CommentSection comments={this.props.post.comments} />
+      <div className="post-border">
+
+          <PostHeader
+            username={this.props.post.username}
+            thumbnailUrl={this.props.post.thumbnailUrl}
+          />
+          <div className='post-image-wrapper'>
+            <img className='post-image' alt='post-thumbnail' src={this.props.post.imageUrl} />
+          </div>
+          <div className = 'like-border'>
+            <LikeSection
+              likes={this.state.likes}
+              incrementLike={this.incrementLike}       
+            />
+          </div>
+          <p> Likes</p>
+          <CommentSection comments={this.props.post.comments} />
+        
       </div>
     );
     }
