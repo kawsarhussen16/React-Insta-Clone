@@ -1,7 +1,7 @@
 import React from 'react';
-import Login from '../Login/Login';
+// import Login from '../Login/Login';
 
-const PermissionCheck = App =>
+const permissionCheck = PostsPage => Login =>
   class extends React.Component {
     constructor(props) {
         super(props);
@@ -21,9 +21,9 @@ const PermissionCheck = App =>
     }
     //////////////////////////////////////////////////////////
     render(){
-      if(this.state.permission) return <App />;
+      if(this.state.permission) return <PostsPage />;
         return <Login />;
       }
   };
 
-export default PermissionCheck;
+export default permissionCheck;
