@@ -6,17 +6,17 @@ const SearchBar = props =>{
             <div className = 'search-wrap'>
                 <div className= 'search'>
                     <div className= 'left-search'>
-                        <img src = 'http://sternmccafferty.com/wp-content/uploads/2017/06/instagram-icon_1057-2227.jpg'
+                        <img src = 'https://cdn130.picsart.com/259430940027212.png?r1024x1024'
                                     alt = 'insta logo' id = 'insta-logo' />
-                        <h1> Instagram</h1>
+                        <h1 className= 'insta-head'> Instagram</h1>
                     </div>
                     <div className='mid-search'>
                             <input
                                 name = 'input search'
                                 id='search-bar' 
-                                type="text"        
+                                type="search"        
                                 placeholder= " 🔍 Search"
-                                onChange={props.searchPosts}
+                                onKeyDown={props.searchForPosts}
                             />
                     </div>
                     <div className="right-search">

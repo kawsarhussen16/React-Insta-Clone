@@ -18,9 +18,40 @@
   padding: 1.5%;
 }
 
-/* Comment section */
+/*//////// Comment section /* /////////////////////// */
 
 .comment-sec{
   text-align: start;
   margin-left: 1rem;
+}
+.comment-input{
+  margin: 2.3%;
+  width: 70%;
+}
+.input-border{
+  height: 40px;
+  width: 300px;
+  border: 1px solid pink;
+  padding: 2%;
+}
+
+/* ///////////Like section /////////////// */
+.like-wrapper{
+  display: flex;
+  width: 100%;
+  padding: 2% 0 0 2%;
+  font-size: 35px;
+}
+.like-icon{
+  padding-left: 3%;
+}
+.like-counter{
+ text-align: start;
+ display: flex;
+ flex-wrap: wrap;
+ width: 100%;
+}
+.like{
+  padding : 0 0 0 5%;
+  font-weight: bold;
 }
