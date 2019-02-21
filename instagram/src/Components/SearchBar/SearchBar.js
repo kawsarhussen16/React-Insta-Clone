@@ -8,7 +8,7 @@ const SearchBar = props =>{
                     <div className= 'left-search'>
                         <img src = 'https://cdn130.picsart.com/259430940027212.png?r1024x1024'
                                     alt = 'insta logo' id = 'insta-logo' />
-                        <h1> Instagram</h1>
+                        <h1 className= 'insta-head'> Instagram</h1>
                     </div>
                     <div className='mid-search'>
                             <input

@@ -8,12 +8,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* position: fixed; */
     margin-left: 10%;
 }
 @media (max-width: 500px) {
     .search {
-        width: 100%;
+        width: 130%;
     }
 }
 .left-search{
@@ -23,7 +22,8 @@
 }
 @media (max-width: 500px) {
     .left-search {
-        margin-left: -25%;
+        margin-left: -45%;
+        width: 40%;
     }
 }
 
@@ -34,18 +34,21 @@ h1{
     padding: 2%;
 }
 @media (max-width: 500px) {
-    h1 {
-        font-size: 15px;
-        padding-top: 4%;
+    .insta-head {
+        font-size: 20px;
+        padding-top: 0%;
     }
 }
 .left-search img{
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
+    margin-top: -2%;
 }
+
 @media (max-width: 500px) {
-    .left-search {
-        width: 40%;
+    #insta-logo{
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -55,13 +58,14 @@ h1{
 @media (max-width: 500px) {
     .mid-search {
         display: none;
+       
     }
 }
 #search-bar{
-    width: 60%;
-    line-height: 1.3rem;
+    width: 70%;
     text-align: center;
-    font-size: 15px;
+    font-size: 25px;
+    margin-top: 1rem;
 }
 .right-search{
     width: 30%;
@@ -83,3 +87,4 @@ h1{
     height: 30px;
     padding-left: 4%;
 }
+

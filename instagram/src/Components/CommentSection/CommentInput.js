@@ -2,10 +2,11 @@ import React from 'react';
 
 const CommentInput = props => {
   return (
-    <form onSubmit={props.submitComment}>
+    <form className= 'comment-border' onSubmit={props.submitComment}>
       <input
+      className= 'input-border'
         type="text"
-        placeholder="Add comment... "
+        placeholder=" Add comment... "
         value={props.comment}
         onChange={props.changeComment}
       />

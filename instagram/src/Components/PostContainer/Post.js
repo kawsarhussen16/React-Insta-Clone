@@ -33,7 +33,7 @@ class Post extends React.Component {
               incrementLike={this.incrementLike}       
             />
           </div>
-          <p> Likes</p>
+          
           <CommentSection comments={this.props.post.comments} />
         
       </div>
