@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { Form, Button } from 'reactstrap';
 const LoginBar = styled.div`
       display : flex;
       flex-wrap: wrap;
@@ -29,7 +29,7 @@ const LoginBar = styled.div`
               margin: 2%;
               padding: 2%;
               border-radius: 6px;
-              background: rgb(144, 144, 236);
+            //   background: rgb(144, 144, 236);
               font-weight: bold;
               font-size: 14px;
           }
@@ -66,7 +66,7 @@ class Login extends React.Component {
   render(){
     return(
       <LoginBar className ='login-box'>
-          <form className ='login-form'>
+          <Form className ='login-form'>
               <h1> Instagram</h1>
               <input 
                   className ='input-form'
@@ -85,9 +85,9 @@ class Login extends React.Component {
                   onChange={this.handleInput} 
               />
               
-              <button onClick={this.handlePassword}>Log in</button>
+              <Button color = 'success' onClick={this.handlePassword}>Log in</Button>
               <span className= 'textp'> <p> Don't have and account ? <strong>Sign up</strong></p></span>
-          </form>
+          </Form>
       </LoginBar>
     );
   }
