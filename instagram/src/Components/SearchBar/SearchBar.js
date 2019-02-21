@@ -1,9 +1,13 @@
 import React from 'react';
 import './SearchBar.css';
+import styled from 'styled-components';
 
-const SearchBar = props =>{
+const NavBar = styled.NavBar`
+    background-color: pink;
+`;
+const SearchBar = props =>{ 
         return( 
-            <div className = 'search-wrap'>
+            <NavBar className = 'search-wrap'>
                 <div className= 'search'>
                     <div className= 'left-search'>
                         <img src = 'https://cdn130.picsart.com/259430940027212.png?r1024x1024'
@@ -25,7 +29,7 @@ const SearchBar = props =>{
                         <img id= 'profile'  src='http://www.anthygenus.com.br/mobile/admthy/front/img/icon-user.png' alt="profile icon"/>
                     </div>
                 </div>
-            </div>
+            </NavBar>
         );
 };
 
