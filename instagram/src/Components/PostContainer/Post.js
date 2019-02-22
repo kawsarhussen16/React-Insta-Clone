@@ -1,10 +1,32 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
-import './Post.css';
 import LikeSection from './LikeSection';
 import PropTypes from "prop-types";
-import '../CommentSection/Comment.css';
+import styled from 'styled-components';
+
+const PostBorder = styled.div`
+  width: 50%;
+  border: 1px solid pink;
+  margin:5% 0 5% 12%;
+  @media (max-width: 500px) {
+        width: 100%;
+        margin: 10% 0;
+    } 
+  .post-image-wrapper{
+      display: flex;
+      .post-image{
+          width: 100%;
+          max-height: 500px;
+          @media (max-width: 500px){
+            height: 400px;
+            width: 385px;
+          }
+      }
+  }
+`;
+
+
 class Post extends React.Component {
   constructor(props) {
     super(props);
@@ -18,7 +40,7 @@ class Post extends React.Component {
   
   render(){
     return(
-      <div className="post-border">
+      <PostBorder className="post-border">
 
           <PostHeader
             username={this.props.post.username}
@@ -36,7 +58,7 @@ class Post extends React.Component {
           
           <CommentSection comments={this.props.post.comments} />
         
-      </div>
+      </PostBorder>
     );
     }
   }
