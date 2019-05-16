@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import PostsPage from './components/PostContainer/PostsPage';
-import permissionCheck from './components/Permission/permissionCheck';
-import Login from './components/Login/Login';
+import PostsPage from './Components/PostContainer/PostsPage.js';
+import permissionCheck from './Components/Permission/PermissionCheck.js';
+import Login from './Components/Login/Login.js';
 class App extends Component {
   constructor() {
     super();
