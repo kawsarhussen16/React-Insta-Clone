@@ -1,23 +1,27 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 import PostsPage from './Components/PostContainer/PostsPage.js';
-import permissionCheck from './Components/Permission/PermissionCheck.js';
 import Login from './Components/Login/Login.js';
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {};
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      permission: false,
+    }
+  }
+  componentDidMount() {
+    if (localStorage.getItem('user') === 'md') {
+      this.setState({ permission: true });
+    }
   }
   render() {
-    return (
-      <div className="App">
-
-            < WithPermissionCheck />
-
-      </div>
-    );
+    if (this.state.permission) {
+      return <PostsPage />
+    }
+    return <Login />
   }
 }
 
-const WithPermissionCheck = permissionCheck(PostsPage)(Login);
+
 export default App;

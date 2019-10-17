@@ -12,27 +12,7 @@ class CommentSection extends React.Component {
       comment: " "
     };
   }
-  componentDidMount() {
-    const id = this.props.postId;
-    if (localStorage.getItem(id)) {
-      // if still in memory
-      this.setState({
-        comments: JSON.parse(localStorage.getItem(this.props.postId)) // update with memory vals
-      });
-    } else {
-      this.setComments(); // if not in memory, set comments to what is in state in local memory
-    }
-  }
-  componenetWillUnmount() {
-    this.setComments();
-  }
 
-  setComments = () => {
-    localStorage.setItem(
-      this.props.postId,
-      JSON.stringify(this.state.comments)
-    );
-  };
   commentHandler = e => {
     this.setState({ comment: e.target.value });
   };
@@ -41,28 +21,27 @@ class CommentSection extends React.Component {
     e.preventDefault();
     if (this.state.comment.length > 0) {
       const newComment = { text: this.state.comment, username: "Md" }; // make object to add
-      const comments = this.state.comments.slice(); // make copy of state object to update
+      const comments = this.state.comments; // make copy of state object to update
       comments.push(newComment); // add newComment object to the state array
       this.setState({ comments: comments, comment: "" }); // update State and blank out the state comment field
-      this.setComments(); // save objects offline
     }
   };
 
   render() {
-      return (
-        <div className= 'comment-sec'>
-          {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-          <div className='comment-input'>
-            <CommentInput   
-              className= 'comment-border'
-              comment={this.state.comment}
-              submitComment={this.addNewComment}
-              changeComment={this.commentHandler}
-            />
-          </div>
+    return (
+      <div className='comment-sec'>
+        {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
+        <div className='comment-input'>
+          <CommentInput
+            className='comment-border'
+            comment={this.state.comment}
+            submitComment={this.addNewComment}
+            changeComment={this.commentHandler}
+          />
         </div>
-      );
-    }
+      </div>
+    );
+  }
 }
 
 CommentSection.propTypes = {
